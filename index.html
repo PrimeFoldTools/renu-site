@@ -136,6 +136,9 @@ const drawG=(g,p)=>g.querySelectorAll('[pathLength]').forEach(e=>draw(e,p));
 const SIL=G.silhouette();
 const wins=$$('.win'), leaves=$$('.leaf'), lids=$$('.lid'), glows=$$('.glow'), ics=$$('.ic');
 const VB0=[300,100,1450,1160], VB1=[250,100,1550,1830];
+// opening: a copy of the end wordmark sits where the house will be; the growing arrow pushes it up and away
+const IW=$('#L-word').cloneNode(true); IW.id='introWord'; IW.style.opacity=1; $('#cam').parentNode.insertBefore(IW,$('#L-word'));
+const IWK=.6, IWTOP=434, IWBOT=IWTOP+(1910-1290)*IWK;
 function bodyPath(x0,x1,yt,yb,rt,rb){const k=.5523;
   return `M${x0} ${yt+rt} C${x0} ${yt+rt*(1-k)} ${x0+rt*(1-k)} ${yt} ${x0+rt} ${yt} L${x1-rt} ${yt} C${x1-rt*(1-k)} ${yt} ${x1} ${yt+rt*(1-k)} ${x1} ${yt+rt}`+
    ` L${x1} ${yb-rb} C${x1} ${yb-rb*(1-k)} ${x1-rb*(1-k)} ${yb} ${x1-rb} ${yb} L${x0+rb} ${yb} C${x0+rb*(1-k)} ${yb} ${x0} ${yb-rb*(1-k)} ${x0} ${yb-rb} Z`}
@@ -151,6 +154,9 @@ function frame(s){
   const mo=ease(seg(s,.26,.4)), stem=i=>(i===1||i===2||i===6||i===7);
   $('#sil').setAttribute('points',SIL.map(([x,y],i)=>{const xs=stem(i)?lerp(1015+(x-1015)*.36,x,mo):x; return `${(1015+(xs-1015)*wide).toFixed(1)},${(y+lift).toFixed(1)}`}).join(' '));
   $('#grow').style.opacity=1-seg(s,.42,.5);
+  { const tip=161+lift, dy=Math.min(0,(tip-70)-IWBOT);
+    IW.setAttribute('transform',`translate(${(1015-1022*IWK).toFixed(1)} ${(IWTOP-1290*IWK+dy).toFixed(1)}) scale(${IWK})`);
+    IW.style.opacity=RM?0:1-cl(-dy/380,0,1); }
   $$('.tick').forEach((k,i)=>{const a=tri(s,.07+i*.008,.13,.24); k.style.opacity=a; k.style.transform=`translate(0,${-28*a}px)`});
   // 2. the chimney grows out of the roof; the lines stay one continuous outline the whole time
   const h=G.HMAX*out3(seg(s,.5,.6)), T=G.thick(h), N=G.offset(T,G.OFF), dr=ease(seg(s,.34,.48));
