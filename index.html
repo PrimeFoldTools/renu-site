@@ -26,7 +26,20 @@ nav a{color:inherit}
 #veil{position:absolute;inset:0;background:var(--cream);opacity:0;pointer-events:none}
 .pill{position:fixed;left:16px;right:16px;bottom:16px;text-align:center;background:var(--ink);color:var(--bone);text-decoration:none;font-weight:600;padding:15px;border-radius:999px;z-index:9;display:none;transition:opacity .2s}
 .no-js #grow,.no-js #ground,.no-js #ticks,.no-js #veil{display:none}
+.about,.contact{position:relative;z-index:3;max-width:1180px;margin:0 auto;padding:110px 48px}
+.about{display:grid;grid-template-columns:1fr 1.15fr;gap:56px;align-items:center;border-top:1px solid var(--line)}
+.about .k,.contact .k{display:block;font-size:13px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#5D735D;margin-bottom:14px}
+.about h2,.contact h2{font-size:34px;line-height:1.2;margin-bottom:14px;text-transform:uppercase}
+.about p,.contact p{font-size:18px;color:var(--ink2);margin-bottom:22px;max-width:31em}
+.photos{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:16px;align-items:end}
+.photos img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:cover;border-radius:6px;border:1px solid var(--line);box-shadow:0 1px 0 rgba(63,74,68,.06),0 10px 24px -14px rgba(63,74,68,.35);background:var(--ivory)}
+.photos img:first-child{border-bottom:4px solid var(--gold)}
+.contact{text-align:center;border-top:1px solid var(--line);padding-bottom:140px}
+.contact p{margin-left:auto;margin-right:auto}
+.contact .addr{display:block;margin-top:14px;font-size:15px;color:var(--ink2)}
 @media (max-width:720px){
+  .about{grid-template-columns:1fr;gap:28px;padding:72px 16px}.contact{padding:72px 16px 130px}
+  .about h2,.contact h2{font-size:24px}.about p,.contact p{font-size:16px}.photos{gap:10px}
   nav{padding:0 16px;height:52px}nav .links a:not(.tel){display:none}
   .story{grid-template-columns:1fr}
   .stage{height:46vh;top:52px;z-index:2;background:url(flower_tile.svg) 0 0/180px 311.769px repeat,var(--bone);border-bottom:1px solid rgba(216,213,205,.7)}
@@ -40,7 +53,7 @@ nav a{color:inherit}
 @media (prefers-reduced-motion:reduce){.pill{transition:none}}
 </style></head>
 <body class="no-js">
-<nav><a class="wm" href="#top">RENU<small>PROPERTY PARTNERS</small></a><span class="links"><a href="#partner">Partner with us</a> &nbsp; <a class="tel" href="#contact">Call us</a></span></nav>
+<nav><a class="wm" href="#top">RENU<small>PROPERTY PARTNERS</small></a><span class="links"><a href="#partner">Partner with us</a> &nbsp; <a class="tel" href="#contact">Email us</a></span></nav>
 <div class="story" id="top">
  <div class="stage" aria-hidden="true"><svg viewBox="300 100 1450 1160" id="svg" preserveAspectRatio="xMidYMid meet">
  <g id="cam">
@@ -110,18 +123,20 @@ nav a{color:inherit}
  <g id="L-word" fill="#3C5931" font-family="Cinzel, serif" font-weight="700"><text x="298" y="1594" font-size="418" textLength="309" lengthAdjust="spacingAndGlyphs">R</text><text x="679" y="1594" font-size="418" textLength="262" lengthAdjust="spacingAndGlyphs">E</text><text x="1022" y="1594" font-size="418" textLength="343" lengthAdjust="spacingAndGlyphs">N</text><text x="1451" y="1594" font-size="418" textLength="302" lengthAdjust="spacingAndGlyphs">U</text><text x="495" y="1756" font-size="137" textLength="81" lengthAdjust="spacingAndGlyphs">P</text><text x="630" y="1756" font-size="137" textLength="90" lengthAdjust="spacingAndGlyphs">R</text><text x="769" y="1756" font-size="137" textLength="106" lengthAdjust="spacingAndGlyphs">O</text><text x="933" y="1756" font-size="137" textLength="80" lengthAdjust="spacingAndGlyphs">P</text><text x="1072" y="1756" font-size="137" textLength="77" lengthAdjust="spacingAndGlyphs">E</text><text x="1209" y="1756" font-size="137" textLength="90" lengthAdjust="spacingAndGlyphs">R</text><text x="1342" y="1756" font-size="137" textLength="85" lengthAdjust="spacingAndGlyphs">T</text><text x="1467" y="1756" font-size="137" textLength="98" lengthAdjust="spacingAndGlyphs">Y</text><text x="542" y="1901" font-size="131" textLength="77" lengthAdjust="spacingAndGlyphs">P</text><text x="645" y="1901" font-size="131" textLength="101" lengthAdjust="spacingAndGlyphs">A</text><text x="793" y="1901" font-size="131" textLength="86" lengthAdjust="spacingAndGlyphs">R</text><text x="919" y="1901" font-size="131" textLength="81" lengthAdjust="spacingAndGlyphs">T</text><text x="1049" y="1901" font-size="131" textLength="95" lengthAdjust="spacingAndGlyphs">N</text><text x="1200" y="1901" font-size="131" textLength="74" lengthAdjust="spacingAndGlyphs">E</text><text x="1324" y="1901" font-size="131" textLength="86" lengthAdjust="spacingAndGlyphs">R</text><text x="1454" y="1901" font-size="131" textLength="65" lengthAdjust="spacingAndGlyphs">S</text><path d="M287 1708 L438 1708 M1604 1708 L1757 1708" stroke="#3C5931" stroke-width="12"/></g>
 </svg><div id="veil"></div></div>
  <div class="chapters">
-  <section class="ch"><span class="k">Sarnia &amp; Lambton County</span><h1>Your rental, managed like our own.</h1><p>We find and screen your tenants, or we run the whole property. One team, one number to call.</p><div><a class="btn" id="cta" href="#contact">Talk to us about your property</a></div><ul class="proof" style="margin-top:22px"><li>Real estate investors since 2008</li><li>Sarnia &amp; Lambton County</li></ul></section>
+  <section class="ch"><span class="k">Sarnia &amp; Lambton County</span><h1>Your rental, managed like our own.</h1><p>We find and screen your tenants, or we run the whole property. One team for owners and tenants.</p><div><a class="btn" id="cta" href="#contact">Talk to us about your property</a></div><ul class="proof" style="margin-top:22px"><li>Real estate investors since 2008</li><li>Sarnia &amp; Lambton County</li></ul></section>
   <section class="ch"><span class="k">01 · One team</span><h2>One team to call.</h2><p>We answer owners and tenants directly. No call centre, no runaround.</p></section>
   <section class="ch"><span class="k">02 · Calls</span><h2>Tenant calls come to us.</h2><p>Questions, repair requests and late rent come to our team. Your phone stays quiet.</p></section>
   <section class="ch"><span class="k">03 · Screening</span><h2>Screening first.</h2><p>Most rental problems start with the wrong tenant. We check legal, verifiable facts, the same way for every applicant.</p></section>
   <section class="ch"><span class="k">04 · Placement</span><h2>The right person inside.</h2><p>We market the unit, run the showings, screen the applicants and sign the lease.</p></section>
   <section class="ch"><span class="k">05 · Management</span><h2>Your property, kept up.</h2><p>Rent collected, repairs arranged, records kept. Small problems get caught early.</p></section>
-  <section class="ch" id="contact"><span class="k">Two ways to work with us</span><h2>Placement or full management.</h2><ul class="proof"><li><b>Tenant placement:</b> we find, screen and sign your tenant.</li><li><b>Full management:</b> we run the property for you.</li></ul><p style="margin-top:18px">Preview version. Phone and contact form coming soon.</p><div><a class="btn" href="#contact">Talk to us about your property</a></div></section>
- </div></section>
+  <section class="ch" id="ways"><span class="k">Two ways to work with us</span><h2>Placement or full management.</h2><ul class="proof"><li><b>Tenant placement:</b> we find, screen and sign your tenant.</li><li><b>Full management:</b> we run the property for you.</li></ul><div style="margin-top:22px"><a class="btn" href="#contact">Talk to us about your property</a></div></section>
  </div>
 </div>
+<section class="about" id="who"><div><span class="k">Who we are</span><h2>We own rentals here too.</h2><p>We've been real estate investors since 2008. Our own rentals are in Sarnia and Lambton County, under the same rules as yours.</p></div>
+ <div class="photos"><img src="people/team_together.jpg" width="306" height="306" alt="The RENU team outdoors by the water" loading="lazy"><img src="people/team_1.jpg" width="316" height="316" alt="Portrait of a RENU team member" loading="lazy"><img src="people/team_2.jpg" width="240" height="241" alt="Portrait of a RENU team member" loading="lazy"></div></section>
+<section class="contact" id="contact"><span class="k">Contact</span><h2>Email us about your property.</h2><p>Tell us the address and what you need.</p><a class="btn" href="mailto:collin@primefold.tools?subject=My%20rental%20property">Email us</a><span class="addr">collin@primefold.tools</span></section>
 
-<a class="pill" id="pill" href="#contact">Call us</a>
+<a class="pill" id="pill" href="#contact">Email us</a>
 <script src="geometry.js"></script>
 <script>
 document.body.classList.remove('no-js');
@@ -224,6 +239,8 @@ function onScroll(){S=window.__s!==undefined?window.__s:sNow(); frame(S)}
 addEventListener('scroll',onScroll,{passive:true}); addEventListener('resize',()=>{A=calcAnchors();onScroll()});
 document.fonts&&document.fonts.ready.then(()=>{A=calcAnchors();onScroll()}); onScroll();
 if(!RM) (function tick(){ if(S<.03){idle+=.03; frame(S)} else if((S>1.8&&S<2.42)||(S>4.5&&S<5.7)) frame(S); requestAnimationFrame(tick)})();
-new IntersectionObserver(([e])=>$('#pill').classList.toggle('on',!e.isIntersecting)).observe($('#cta'));
+{ const vis={cta:true,contact:false}, upd=()=>$('#pill').classList.toggle('on',!vis.cta&&!vis.contact);
+  new IntersectionObserver(es=>{es.forEach(e=>vis[e.target.id]=e.isIntersecting); upd()}).observe($('#cta'));
+  new IntersectionObserver(es=>{es.forEach(e=>vis[e.target.id]=e.isIntersecting); upd()},{rootMargin:'0px 0px -10% 0px'}).observe($('#contact')); }
 </script>
 </body></html>
