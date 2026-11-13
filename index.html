@@ -31,9 +31,13 @@ nav a{color:inherit}
 .about .k,.contact .k{display:block;font-size:13px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#5D735D;margin-bottom:14px}
 .about h2,.contact h2{font-size:34px;line-height:1.2;margin-bottom:14px;text-transform:uppercase}
 .about p,.contact p{font-size:18px;color:var(--ink2);margin-bottom:22px;max-width:31em}
-.photos{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:16px;align-items:end}
+.photos{display:grid;grid-template-columns:repeat(2,150px);justify-content:center;gap:18px 24px;align-items:start}
+.photos .duo{grid-column:1/-1;justify-self:center;width:300px;max-width:100%;border-radius:50%}
+.photos figure{margin:0;text-align:center}
+.photos figure img{width:150px}
+.photos figcaption{margin-top:8px;font-size:15px;font-weight:600;color:var(--ink2);letter-spacing:.04em}
 .photos img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:cover;border-radius:6px;border:1px solid var(--line);box-shadow:0 1px 0 rgba(63,74,68,.06),0 10px 24px -14px rgba(63,74,68,.35);background:var(--ivory)}
-.photos img:first-child{border-bottom:4px solid var(--gold)}
+.photos .duo{border:3px solid var(--gold)}
 .contact{text-align:center;border-top:1px solid var(--line);padding-bottom:140px}
 .contact p{margin-left:auto;margin-right:auto}
 .contact .addr{display:block;margin-top:14px;font-size:15px;color:var(--ink2)}
@@ -133,8 +137,8 @@ nav a{color:inherit}
  </div>
 </div>
 <section class="about" id="who"><div><span class="k">Who we are</span><h2>We own rentals here too.</h2><p>We've been real estate investors since 2008. Our own rentals are in Sarnia and Lambton County, under the same rules as yours.</p></div>
- <div class="photos"><img src="people/team_together.jpg" width="306" height="306" alt="The RENU team outdoors by the water" loading="lazy"><img src="people/team_1.jpg" width="316" height="316" alt="Portrait of a RENU team member" loading="lazy"><img src="people/team_2.jpg" width="240" height="241" alt="Portrait of a RENU team member" loading="lazy"></div></section>
-<section class="contact" id="contact"><span class="k">Contact</span><h2>Email us about your property.</h2><p>Tell us the address and what you need.</p><a class="btn" href="mailto:collin@primefold.tools?subject=My%20rental%20property">Email us</a><span class="addr">collin@primefold.tools</span></section>
+ <div class="photos"><img class="duo" src="people/team_together.jpg" width="306" height="306" alt="Priscilla and Collin outdoors by the water" loading="lazy"><figure><img src="people/team_1.jpg" width="316" height="316" alt="Priscilla" loading="lazy"><figcaption>Priscilla</figcaption></figure><figure><img src="people/team_2.jpg" width="240" height="241" alt="Collin" loading="lazy"><figcaption>Collin</figcaption></figure></div></section>
+<section class="contact" id="contact"><span class="k">Contact</span><h2>Email us about your property.</h2><p>Tell us the address and what you need.</p><a class="btn" href="mailto:pjrealestatesolutions@gmail.com?subject=My%20rental%20property">Email us</a><span class="addr">pjrealestatesolutions@gmail.com</span></section>
 
 <a class="pill" id="pill" href="#contact">Email us</a>
 <script src="geometry.js"></script>
