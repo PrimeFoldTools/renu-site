@@ -34,7 +34,7 @@ nav a{color:inherit}
 .photos{display:grid;grid-template-columns:repeat(2,150px);justify-content:center;gap:18px 24px;align-items:start}
 .photos .duo{grid-column:1/-1;justify-self:center;width:300px;max-width:100%;border-radius:50%}
 .photos figure{margin:0;text-align:center}
-.photos figure img{width:150px}
+.photos figure img{width:150px}.photos .solo{grid-column:1/-1;justify-self:center}.photos .solo img{width:300px;max-width:100%}
 .photos figcaption{margin-top:8px;font-size:15px;font-weight:600;color:var(--ink2);letter-spacing:.04em}
 .photos img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:cover;border-radius:6px;border:1px solid var(--line);box-shadow:0 1px 0 rgba(63,74,68,.06),0 10px 24px -14px rgba(63,74,68,.35);background:var(--ivory)}
 .photos .duo{border:3px solid var(--gold)}
@@ -129,7 +129,7 @@ nav a{color:inherit}
  <div class="chapters">
   <section class="ch"><span class="k">Sarnia &amp; Lambton County</span><h1>Your rental, managed like our own.</h1><p>We find and screen your tenants, or we run the whole property. One team for owners and tenants.</p><div><a class="btn" id="cta" href="#contact">Talk to us about your property</a></div><ul class="proof" style="margin-top:22px"><li>Real estate investors since 2008</li><li>Sarnia &amp; Lambton County</li></ul></section>
   <section class="ch"><span class="k">01 · One team</span><h2>One team to call.</h2><p>We answer owners and tenants directly. No call centre, no runaround.</p></section>
-  <section class="ch"><span class="k">02 · Calls</span><h2>Tenant calls come to us.</h2><p>Questions, repair requests and late rent come to our team. Your phone stays quiet.</p></section>
+  <section class="ch"><span class="k">02 · Calls</span><h2>Tenant calls come to us.</h2><p>Questions, repairs and after-hours emergencies come to our team. Your phone stays quiet.</p></section>
   <section class="ch"><span class="k">03 · Screening</span><h2>Screening first.</h2><p>Most rental problems start with the wrong tenant. We check legal, verifiable facts, the same way for every applicant.</p></section>
   <section class="ch"><span class="k">04 · Placement</span><h2>The right person inside.</h2><p>We market the unit, run the showings, screen the applicants and sign the lease.</p></section>
   <section class="ch"><span class="k">05 · Management</span><h2>Your property, kept up.</h2><p>Rent collected, repairs arranged, records kept. Small problems get caught early.</p></section>
@@ -137,7 +137,7 @@ nav a{color:inherit}
  </div>
 </div>
 <section class="about" id="who"><div><span class="k">Who we are</span><h2>We own rentals here too.</h2><p>We've been real estate investors since 2008. Our own rentals are in Sarnia and Lambton County, under the same rules as yours.</p></div>
- <div class="photos"><img class="duo" src="people/team_together.jpg" width="306" height="306" alt="Priscilla and Collin outdoors by the water" loading="lazy"><figure><img src="people/team_1.jpg" width="316" height="316" alt="Priscilla" loading="lazy"><figcaption>Priscilla</figcaption></figure><figure><img src="people/team_2.jpg" width="240" height="241" alt="Collin" loading="lazy"><figcaption>Collin</figcaption></figure></div></section>
+ <div class="photos"><figure class="solo"><img class="duo" src="people/team_1.jpg" width="316" height="316" alt="Priscilla" loading="lazy"><figcaption>Priscilla</figcaption></figure></div></section>
 <section class="contact" id="contact"><span class="k">Contact</span><h2>Email us about your property.</h2><p>Tell us the address and what you need.</p><a class="btn" href="mailto:priscilla@renupropertypartners.ca?subject=My%20rental%20property">Email us</a><span class="addr">Priscilla@RenuPropertyPartners.ca</span></section>
 
 <a class="pill" id="pill" href="#contact">Email us</a>
